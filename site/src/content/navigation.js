@@ -10,6 +10,7 @@ const sectionOrder = [
   'im',
   'channel',
   'reference',
+  'source-analysis',
 ]
 
 const sectionLabels = {
@@ -23,6 +24,7 @@ const sectionLabels = {
     memory: '记忆系统',
     reference: '开发者参考',
     skills: 'Skills 系统',
+    'source-analysis': '源码剖析',
   },
   en: {
     agent: 'Multi-Agent',
@@ -34,6 +36,7 @@ const sectionLabels = {
     memory: 'Memory',
     reference: 'Developer reference',
     skills: 'Skills',
+    'source-analysis': 'Source analysis',
   },
 }
 
@@ -95,6 +98,7 @@ const preferredLabels = new Map([
   ['/en/im', 'IM overview'],
   ['/en/reference/local-server', 'Local server & API'],
   ['/en/reference/fixes', 'Fixes vs. leaked source'],
+  ['/en/source-analysis', 'Overview'],
 ])
 
 export function getDocNavigation(locale = 'zh') {

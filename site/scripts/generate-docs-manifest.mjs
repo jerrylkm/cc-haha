@@ -28,7 +28,8 @@ const sectionLabels = {
     skills: '技能系统',
     memory: '记忆系统',
     channel: 'Channel 研究',
-    reference: '参考资料'
+    reference: '参考资料',
+    'source-analysis': '源码剖析'
   },
   en: {
     guide: 'Get started',
@@ -39,7 +40,8 @@ const sectionLabels = {
     skills: 'Skills',
     memory: 'Memory',
     channel: 'Channel research',
-    reference: 'Reference'
+    reference: 'Reference',
+    'source-analysis': 'Source analysis'
   }
 }
 
@@ -52,7 +54,8 @@ const sectionOrder = [
   'skills',
   'memory',
   'channel',
-  'reference'
+  'reference',
+  'source-analysis'
 ]
 
 function toPosix(value) {
