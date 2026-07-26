@@ -74,11 +74,11 @@ This documentation suite explains how Claude Code CLI is engineered under the ho
 
 | System Area | File / Directory | Description |
 | :--- | :--- | :--- |
-| **CLI Entry Point** | [src/main.tsx](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/main.tsx) | Main CLI runner, Commander.js argument parsing, REPL initialization. |
-| **Init & Setup** | [src/entrypoints/init.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/entrypoints/init.ts) | Pre-flight settings, telemetry initialization, keychain prefetching. |
-| **Agent Controller** | [src/QueryEngine.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/QueryEngine.ts) | Orchestrates conversation turns, tool responses, app state, and interruptions. |
-| **Query Stream** | [src/query.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/query.ts) | Async generator handling LLM API requests, event streaming, tool loops. |
-| **Tool Interface** | [src/Tool.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/Tool.ts) | Core schema, types, and builder utilities for all tools. |
+| **CLI Entry Point** | [src/main.tsx](../src/main.tsx) | Main CLI runner, Commander.js argument parsing, REPL initialization. |
+| **Init & Setup** | [src/entrypoints/init.ts](../src/entrypoints/init.ts) | Pre-flight settings, telemetry initialization, keychain prefetching. |
+| **Agent Controller** | [src/QueryEngine.ts](../src/QueryEngine.ts) | Orchestrates conversation turns, tool responses, app state, and interruptions. |
+| **Query Stream** | [src/query.ts](../src/query.ts) | Async generator handling LLM API requests, event streaming, tool loops. |
+| **Tool Interface** | [src/Tool.ts](../src/Tool.ts) | Core schema, types, and builder utilities for all tools. |
 | **Tool Registry** | [src/tools.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/tools.ts) | Tool aggregator, permission filtering, and base tool loader. |
 | **Built-in Tools** | [src/tools/](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/tools/) | Individual implementations for `BashTool`, `FileEditTool`, `FileReadTool`, `GlobTool`, etc. |
 | **Terminal UI** | [src/ink.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/ink.ts) | Ink React rendering wrapper with custom design system themes. |
