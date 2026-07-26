@@ -6,7 +6,7 @@ To handle complex, multi-step engineering workflows without overflowing the main
 
 ## 🤖 Sub-Agents & Task Runner
 
-When Claude needs to perform parallel or deep exploration (such as researching code across dozens of files or running lengthy test suites), it spawns specialized **sub-agents** using the `Agent` / `Task` tool ([src/tools/AgentTool/AgentTool.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/tools/AgentTool/AgentTool.ts)).
+When Claude needs to perform parallel or deep exploration (such as researching code across dozens of files or running lengthy test suites), it spawns specialized **sub-agents** using the `Agent` / `Task` tool ([src/tools/AgentTool/AgentTool.ts](../src/tools/AgentTool/AgentTool.ts)).
 
 ```
 ┌───────────────────────────────────────────────────────────┐
