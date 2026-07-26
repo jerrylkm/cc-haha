@@ -51,6 +51,7 @@ Use the atlas to account for individual files, and the explanatory chapters to u
 | [08 — Complete tool catalog](08-complete-tool-catalog.md) | Which tools exist, what does each do, and why can the visible list change? |
 | [09 — Core function reference](09-core-function-reference.md) | Which exact symbols own startup, turns, streaming, tools, permissions, and persistence? |
 | [10 — User FAQ](10-user-faq.md) | Where is data saved, why did it ask/not ask, what can go wrong, and how do I check? |
+| [11 — Bash security checks](11-bash-security-checks.md) | How exactly is a shell command judged safe, ask, or blocked, check by check? |
 | [Glossary](glossary.md) | What do the recurring terms mean? |
 
 ## The shortest possible mental model
@@ -88,3 +89,28 @@ For a concrete inventory rather than a framework summary, see [the complete tool
 - **Supporting code:** [`runtime/`](../../../runtime/), [`scripts/`](../../../scripts/), [`tests/`](../../../tests/), and [`site/`](../../../site/).
 
 The chapters focus on the CLI/runtime core while calling out these boundaries whenever behavior crosses them.
+
+## Coverage and depth map
+
+Not every topic is documented at the same depth. This table is honest about which chapters are deep dives, which are summaries, and where the repository already keeps a longer standalone guide.
+
+| Topic | Depth here | Where to go deeper |
+|---|---|---|
+| Startup and one turn | Deep | [02](02-startup-and-one-turn.md), [09](09-core-function-reference.md) |
+| Agent/model/tool/recovery loop | Deep | [03](03-agent-loop.md), [09](09-core-function-reference.md) |
+| Tools (every registration) | Deep | [08](08-complete-tool-catalog.md) |
+| Permissions and Bash security | Deep | [04](04-tools-permissions-security.md), [11](11-bash-security-checks.md) |
+| Context, persistence, providers | Medium | [05](05-context-persistence-services.md) |
+| Cost and usage | Medium | [05 §8](05-context-persistence-services.md) |
+| Analytics and privacy | Medium | [05 §12](05-context-persistence-services.md) |
+| MCP and LSP services | Summary | [05 §9–§10](05-context-persistence-services.md) |
+| Local server / WebSocket | Summary | [05 §11](05-context-persistence-services.md) |
+| Terminal UI | Medium | [06](06-terminal-ui-commands.md) |
+| Multi-agent / teams | Summary here | repo guide [`docs/agent/`](../agent/) |
+| Memory system | Summary here | repo guide [`docs/memory/`](../memory/) |
+| Skills system | Summary here | repo guide [`docs/skills/`](../skills/) |
+| Computer Use | Not covered here | repo guide [`docs/features/computer-use.md`](../features/computer-use.md) |
+| IM adapters / channels | Not covered here | repo guides [`docs/im/`](../im/), [`docs/channel/`](../channel/) |
+| Desktop app | Boundary only | repo guide [`docs/desktop/`](../desktop/) |
+
+“Summary” means the mechanism is explained but not traced line by line. “Not covered here” means the topic belongs to a different part of the product and the repository already has its own document for it.

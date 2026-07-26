@@ -101,7 +101,14 @@ The index accelerates listing/search but the JSONL transcript remains the durabl
 
 [`src/cost-tracker.ts`](../../../src/cost-tracker.ts) tracks cost, API/tool duration, changed lines, requests, and per-model input/output/cache/web-search usage.
 
-Session restoration only hydrates stored cost when the saved session ID matches. This avoids applying the previous session’s totals to a different conversation.
+The stored cost state includes total cost in USD, total API duration (with and without retries), total tool duration, lines added/removed, the last request duration, and a per-model usage map. Each model entry can record input tokens, output tokens, cache-read and cache-creation tokens, web-search requests, and a computed cost. This is what the UI uses to show token and cost summaries.
+
+Two cautions matter for users:
+
+- these numbers are the runtime’s own accounting, partly from model-reported usage; the authoritative charge comes from your provider, not this counter;
+- a local command can consume compute, disk, or network independently of any model cost.
+
+Session restoration only hydrates stored cost when the saved session ID matches (`restoreCostStateForSession`). This avoids applying the previous session’s totals to a different conversation.
 
 ## 9. MCP
 
@@ -126,6 +133,12 @@ Because MCP tools come from connected servers, their names and actions cannot be
 [`src/services/analytics/index.ts`](../../../src/services/analytics/index.ts) queues events until a sink is attached. Metadata marker types require call sites to distinguish reviewed non-code data from PII-tagged data. `_PROTO_*` fields are removed before sending to sinks that must not receive privileged fields.
 
 Errors intended for telemetry use explicitly named safe wrappers, reducing accidental inclusion of code or file paths. This is a convention enforced through types and naming rather than a magical sanitizer.
+
+For a user, three practical points follow:
+
+- analytics only flow when a sink is configured/attached; before that, events are queued rather than sent;
+- the code separates ordinary reviewed metadata from PII-tagged metadata at the type level, so callers must consciously mark sensitive values;
+- because the protection is a coding convention, a custom build, plugin, or provider integration could still send more than the core intends. Treat privacy as dependent on your configuration and installed extensions, not guaranteed by these markers alone.
 
 ## 13. Migrations
 

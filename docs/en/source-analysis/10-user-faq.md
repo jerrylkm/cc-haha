@@ -58,7 +58,7 @@ Use [04 — Tools, permissions, and security](04-tools-permissions-security.md) 
 
 The permission system is deliberately conservative. It may ask because parsing was uncertain, a path is sensitive, a command contains too many subcommands, a rule explicitly says “ask,” sandboxing is unavailable, or an automated check could not confidently approve it.
 
-False positives are safer than silently running a command the parser misunderstood.
+False positives are safer than silently running a command the parser misunderstood. For the exact list of checks and why each one exists, see [11 — Bash security checks in depth](11-bash-security-checks.md).
 
 ## Why is a tool missing?
 

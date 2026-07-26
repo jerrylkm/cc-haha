@@ -114,7 +114,7 @@ If you are unsure, review the exact command, file path, and proposed change inst
 
 The permission mode is not fixed for all time. It can come from a saved `defaultMode` setting, be chosen at launch with a command-line flag such as `--permission-mode`, or be changed during a session (for example through the in-app permission controls). Because the mode can shift, do not assume the behavior you saw earlier still applies later in the same session—check the current mode if a prompt appears or disappears unexpectedly.
 
-See [04 — Tools, permissions, and security](04-tools-permissions-security.md).
+See [04 — Tools, permissions, and security](04-tools-permissions-security.md). If you want to know exactly why a shell command was allowed, questioned, or blocked, see [11 — Bash security checks in depth](11-bash-security-checks.md).
 
 ## 7. What is the safest way to use it?
 

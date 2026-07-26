@@ -87,6 +87,8 @@ Rules can be broad. Approving or configuring a pattern such as an entire command
 
 [`bashPermissions.ts`](../../../src/tools/BashTool/bashPermissions.ts) caps the number of subcommands subjected to automatic analysis. Very large compounds fall back to asking rather than attempting an expensive or unreliable classification.
 
+> **Full breakdown:** [11 — Bash security checks in depth](11-bash-security-checks.md) documents all twenty-three individual check IDs, the primary tree-sitter gate versus the legacy fallback, validator ordering, the misparsing rule that can force an early stop, the subcommand cap, and what each check means for a user.
+
 ### Wrapper normalization
 
 Permission matching can peel known wrappers such as `timeout`, `time`, `nice`, `stdbuf`, `nohup`, and simple environment assignments. It repeats until stable, because wrappers can be nested. Flag/value syntax is constrained, and horizontal whitespace is used deliberately so a newline cannot be swallowed as harmless spacing.
