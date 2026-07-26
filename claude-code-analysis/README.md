@@ -8,12 +8,12 @@ This documentation suite explains how Claude Code CLI is engineered under the ho
 
 ## 📚 Documentation Index
 
-1. **[01-architecture-overview.md](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/claude-code-analysis/01-architecture-overview.md)**  
+1. **[01-architecture-overview.md](./01-architecture-overview.md)**  
    *High-Level System Architecture, Entry Points, and Lifecycle.*  
    Explains how the CLI boots up, parses flags, runs pre-flight checks, loads configurations, and launches the interactive REPL.
 
-2. **[02-agent-loop-and-query-engine.md](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/claude-code-analysis/02-agent-loop-and-query-engine.md)**  
-   *The Agent Loop, QueryEngine, and Streaming Interaction.*  
+2. **[02-agent-loop-and-query-engine.md](./02-agent-loop-and-query-engine.md)**  
+   *The Agent Loop, QueryEngine, and Streaming Interaction.*
    Deep dive into `QueryEngine` and `query()`, detailing how user prompts are processed, streamed through Anthropic LLMs, converted into tool call dispatches, and handled recursively until completion. Includes auto-compaction and token management.
 
 3. **[03-tool-system.md](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/claude-code-analysis/03-tool-system.md)**  
