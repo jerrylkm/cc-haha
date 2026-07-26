@@ -37,8 +37,7 @@ All tools in Claude Code CLI share a uniform definition and execution pattern bu
 
 ## 📐 Tool Schema & Construction
 
-Tools are typed and constructed using `buildTool()` in [src/Tool.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/Tool.ts:785):
-
+Tools are typed and constructed using `buildTool()` in [src/Tool.ts](../src/Tool.ts#L785):
 ```typescript
 // Simplified structural representation from Tool.ts
 export type Tool<InputSchema, ResultType> = {
