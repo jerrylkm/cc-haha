@@ -19,11 +19,11 @@ These pages explain capabilities, approval, privacy, local storage, network acti
 
 ### I want to understand how it works
 
-Read chapters 01 through 06, then use the tool catalog.
+Read chapters 01 through 06 for the core, then follow the topic deep-dives that interest you: [08](08-complete-tool-catalog.md) (tools), [11](11-bash-security-checks.md) (shell safety), [12](12-context-and-compaction.md) (memory limits), [14](14-multi-agent-and-teams.md) (subagents/teams), [15](15-memory-system.md) (memory), [16](16-computer-use.md) (Computer Use), [17](17-remote-access-and-bridge.md) (remote access), [18](18-local-server-and-proxy.md) (local server/proxy), and [19](19-mcp-and-lsp.md) (MCP/LSP).
 
 ### I am debugging or auditing the source
 
-Use [09 — Core function reference](09-core-function-reference.md) and [07 — Source atlas](07-source-atlas.md). They are reference pages and are not intended as the beginner introduction.
+Use [09 — Core function reference](09-core-function-reference.md), [13 — Complete src subsystem map](13-src-subsystem-map.md), and [07 — Source atlas](07-source-atlas.md). They are reference pages and are not intended as the beginner introduction.
 
 ## What “complete” means here
 
@@ -53,6 +53,13 @@ Use the atlas to account for individual files, and the explanatory chapters to u
 | [10 — User FAQ](10-user-faq.md) | Where is data saved, why did it ask/not ask, what can go wrong, and how do I check? |
 | [11 — Bash security checks](11-bash-security-checks.md) | How exactly is a shell command judged safe, ask, or blocked, check by check? |
 | [12 — Context limits and compaction](12-context-and-compaction.md) | Why does a long session “forget,” and how do thresholds, summaries, and preservation work? |
+| [13 — Complete src subsystem map](13-src-subsystem-map.md) | What is every top-level `src/` directory and root file, and which chapter covers it? |
+| [14 — Multi-agent, subagents, and teams](14-multi-agent-and-teams.md) | How does one session spawn subagents, forks, worktree/remote agents, and teams? |
+| [15 — Memory system](15-memory-system.md) | How does it remember across turns and sessions, and where is memory stored? |
+| [16 — Computer Use and browser control](16-computer-use.md) | How can the agent control the screen and a browser, and what gates protect it? |
+| [17 — Remote access and IM bridge](17-remote-access-and-bridge.md) | How is a session controlled from the web, a phone (H5), or a chat app? |
+| [18 — Local server and provider proxy](18-local-server-and-proxy.md) | How does the HTTP/WebSocket server run sessions and proxy non-Anthropic providers? |
+| [19 — MCP and LSP integration](19-mcp-and-lsp.md) | How are external tool servers (MCP) and language servers (LSP) connected? |
 | [Glossary](glossary.md) | What do the recurring terms mean? |
 
 ## The shortest possible mental model
@@ -105,14 +112,14 @@ Not every topic is documented at the same depth. This table is honest about whic
 | Context, persistence, providers | Medium | [05](05-context-persistence-services.md) |
 | Cost and usage | Medium | [05 §8](05-context-persistence-services.md) |
 | Analytics and privacy | Medium | [05 §12](05-context-persistence-services.md) |
-| MCP and LSP services | Summary | [05 §9–§10](05-context-persistence-services.md) |
-| Local server / WebSocket | Summary | [05 §11](05-context-persistence-services.md) |
+| MCP and LSP services | Deep | [19](19-mcp-and-lsp.md) |
+| Local server / WebSocket / proxy | Deep | [18](18-local-server-and-proxy.md) |
 | Terminal UI | Medium | [06](06-terminal-ui-commands.md) |
-| Multi-agent / teams | Summary here | repo guide [`docs/agent/`](../agent/) |
-| Memory system | Summary here | repo guide [`docs/memory/`](../memory/) |
-| Skills system | Summary here | repo guide [`docs/skills/`](../skills/) |
-| Computer Use | Not covered here | repo guide [`docs/features/computer-use.md`](../features/computer-use.md) |
-| IM adapters / channels | Not covered here | repo guides [`docs/im/`](../im/), [`docs/channel/`](../channel/) |
+| Multi-agent / teams | Deep | [14](14-multi-agent-and-teams.md) (repo: [`docs/agent/`](../agent/)) |
+| Memory system | Deep | [15](15-memory-system.md) (repo: [`docs/memory/`](../memory/)) |
+| Skills system | Medium | [06 §5](06-terminal-ui-commands.md) (repo: [`docs/skills/`](../skills/)) |
+| Computer Use | Deep | [16](16-computer-use.md) (repo: [`docs/features/computer-use.md`](../features/computer-use.md)) |
+| Remote access / IM channels | Deep | [17](17-remote-access-and-bridge.md) (repo: [`docs/im/`](../im/), [`docs/channel/`](../channel/)) |
 | Desktop app | Boundary only | repo guide [`docs/desktop/`](../desktop/) |
 
 “Summary” means the mechanism is explained but not traced line by line. “Not covered here” means the topic belongs to a different part of the product and the repository already has its own document for it.

@@ -20,6 +20,14 @@ Normal path permissions focus on the working directory and additional allowed di
 
 The safe assumption is: **review what it is asking to do, not merely which folder you opened.**
 
+## Can it control my mouse, keyboard, or screen?
+
+Only if the Computer Use feature is enabled and you grant it operating-system permission. It is off by default and does nothing until you turn it on and approve Accessibility/Screen-Recording access.
+
+When enabled, it can take screenshots and move the mouse, click, type, and scroll. There are layered safeguards: a master kill switch, per-app permission tiers (browsers are screenshot-only, terminals cannot be typed into), a single-session lock, and a clipboard guard against paste-injection. Even so, a fully granted app can be broadly controlled, so treat authorizing Computer Use like handing over your mouse and keyboard.
+
+For the full mechanism and gates, see [16 — Computer Use and browser control](16-computer-use.md).
+
 ## Can it read passwords or API keys?
 
 The code has sensitive-path checks and policies, but no program can infer every secret location or prevent a user-approved command from reading one.
@@ -155,7 +163,7 @@ This reduces risk but does not replace reviewing the final file state.
 
 A subagent is another AI task runner given a focused prompt. It may work synchronously or in the background and may use a restricted tool set.
 
-Subagents can improve parallelism, but they can also increase model usage and make the activity harder to follow. Ordinary async agents are prevented from recursively using several main-thread control tools.
+Subagents can improve parallelism, but they can also increase model usage and make the activity harder to follow. Ordinary async agents are prevented from recursively using several main-thread control tools. For how subagents, forks, and teams work in detail, see [14 — Multi-agent, subagents, and teams](14-multi-agent-and-teams.md).
 
 ## What is an MCP server, and should I trust it?
 
@@ -209,7 +217,7 @@ The local cost tracker estimates/model-reports usage but cannot prevent every ex
 
 Only when a suitable tool, shell command, plugin, MCP server, or integration is available and permission allows it. These actions can be irreversible and externally visible.
 
-Do not treat a successful local diff review as proof that no remote side effect occurred.
+Do not treat a successful local diff review as proof that no remote side effect occurred. If you control the session remotely (web, phone, or a chat app), see [17 — Remote access and IM bridge](17-remote-access-and-bridge.md) for how those channels are secured.
 
 ## How can I tell what it changed?
 

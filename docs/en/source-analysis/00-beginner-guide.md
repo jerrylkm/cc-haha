@@ -196,6 +196,8 @@ The code tracks tokens, duration, and model usage, but actual billing rules come
 
 Adding an extension can add behavior that is not fully described by the built-in tool catalog.
 
+To go deeper on any of these, see [14 — Multi-agent, subagents, and teams](14-multi-agent-and-teams.md), [15 — Memory system](15-memory-system.md), [16 — Computer Use and browser control](16-computer-use.md), and [17 — Remote access and IM bridge](17-remote-access-and-bridge.md).
+
 ## 13. Does this repository exactly equal official Claude Code?
 
 That cannot be established from the files alone.
@@ -221,6 +223,8 @@ Recommended order:
 4. [04 — Tools, permissions, and security](04-tools-permissions-security.md);
 5. [08 — Complete tool catalog](08-complete-tool-catalog.md) when you want to know a specific capability;
 6. [Glossary](glossary.md) whenever a term is unfamiliar.
+
+If you use a specific power, read its chapter: [14 — subagents and teams](14-multi-agent-and-teams.md), [15 — memory](15-memory-system.md), [16 — Computer Use](16-computer-use.md), or [17 — remote access](17-remote-access-and-bridge.md).
 
 You can skip:
 
