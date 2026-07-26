@@ -38,8 +38,8 @@ Unlike traditional web or Electron chat interfaces, **Claude Code CLI** renders 
 
 ## 🎨 How Ink Renders React to ANSI
 
-[src/ink.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/ink.ts:17) initializes Ink's custom root:
-1. **Theming**: Encloses all rendered nodes inside `<ThemeProvider>` ([src/components/design-system/ThemeProvider.js](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/components/design-system/ThemeProvider.js)), ensuring components like `ThemedBox` and `ThemedText` automatically respect active terminal color schemes.
+[src/ink.ts](../src/ink.ts#L17) initializes Ink's custom root:
+1. **Theming**: Encloses all rendered nodes inside `<ThemeProvider>` ([src/components/design-system/ThemeProvider.js](../src/components/design-system/ThemeProvider.js)), ensuring components like `ThemedBox` and `ThemedText` automatically respect active terminal color schemes.
 2. **Flexbox Layout**: Ink uses Yoga layout under the hood to calculate flexbox positioning for terminal columns and rows.
 3. **Differential Re-rendering**: Ink updates only changed ANSI lines in stdout, preventing screen flickering as text streams from the model.
 
