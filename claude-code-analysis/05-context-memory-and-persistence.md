@@ -6,7 +6,7 @@ For Claude to be an effective coding assistant, it must understand project conve
 
 ## 🧠 System Context Assembly
 
-Before every prompt turn, [src/context.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/context.ts) compiles system and user context into a structured prompt injection via `getSystemContext()` and `getUserContext()`:
+Before every prompt turn, [src/context.ts](../src/context.ts) compiles system and user context into a structured prompt injection via `getSystemContext()` and `getUserContext()`:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
