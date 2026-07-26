@@ -52,6 +52,7 @@ Use the atlas to account for individual files, and the explanatory chapters to u
 | [09 — Core function reference](09-core-function-reference.md) | Which exact symbols own startup, turns, streaming, tools, permissions, and persistence? |
 | [10 — User FAQ](10-user-faq.md) | Where is data saved, why did it ask/not ask, what can go wrong, and how do I check? |
 | [11 — Bash security checks](11-bash-security-checks.md) | How exactly is a shell command judged safe, ask, or blocked, check by check? |
+| [12 — Context limits and compaction](12-context-and-compaction.md) | Why does a long session “forget,” and how do thresholds, summaries, and preservation work? |
 | [Glossary](glossary.md) | What do the recurring terms mean? |
 
 ## The shortest possible mental model
@@ -100,6 +101,7 @@ Not every topic is documented at the same depth. This table is honest about whic
 | Agent/model/tool/recovery loop | Deep | [03](03-agent-loop.md), [09](09-core-function-reference.md) |
 | Tools (every registration) | Deep | [08](08-complete-tool-catalog.md) |
 | Permissions and Bash security | Deep | [04](04-tools-permissions-security.md), [11](11-bash-security-checks.md) |
+| Context limits and compaction | Deep | [12](12-context-and-compaction.md) |
 | Context, persistence, providers | Medium | [05](05-context-persistence-services.md) |
 | Cost and usage | Medium | [05 §8](05-context-persistence-services.md) |
 | Analytics and privacy | Medium | [05 §12](05-context-persistence-services.md) |

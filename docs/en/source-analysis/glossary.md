@@ -6,7 +6,7 @@
 | API | A structured way for two programs to communicate. Here it often means the network request to a model provider. |
 | Agentic turn | One user request plus all model/tool/model iterations needed to finish it. |
 | Attachment message | Session metadata represented in the message stream but not ordinary user/assistant chat. |
-| Auto-compaction | Automatic summarization of old context when the conversation approaches the model limit. |
+| Auto-compaction | Automatic summarization of old context when the conversation approaches the model limit (see chapter 12). |
 | Bash | A command shell. The Bash tool can run general terminal commands and is therefore powerful. |
 | CLI | Command-line interface: a program controlled through text in a terminal. |
 | Context collapse | Structured preservation/replay of collapsed context, separate from ordinary summarization. |

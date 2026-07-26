@@ -49,7 +49,7 @@ Several mechanisms can coexist because they solve different problems. They run i
 4. **then context collapse** stores/replays a more structured collapsed history;
 5. **finally, auto-compaction** summarizes old conversation as a fallback. It runs last on purpose: if the earlier steps already brought the conversation under the threshold, auto-compaction is a no-op and the granular context is preserved instead of being replaced by a single summary.
 
-For a user, all five mechanisms mean the same broad thing: the model cannot hold unlimited information, so the program decides what to keep in active working context. The original local transcript may contain more detail than the model currently remembers.
+For a user, all five mechanisms mean the same broad thing: the model cannot hold unlimited information, so the program decides what to keep in active working context. The original local transcript may contain more detail than the model currently remembers. For a full breakdown of thresholds, the summary format, and what is preserved, see [12 — Context limits and compaction in depth](12-context-and-compaction.md).
 
 ## 3. Streaming
 

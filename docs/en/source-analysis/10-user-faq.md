@@ -114,7 +114,7 @@ Large projects also have context limits, so the program uses targeted reads, sea
 
 Compaction shortens what is sent back to the model by summarizing or removing older low-value context. The visible/local transcript can retain more than the model’s current working context.
 
-Compaction can lose detail from the model’s active memory even when the original transcript still exists on disk.
+Compaction can lose detail from the model’s active memory even when the original transcript still exists on disk. For the exact thresholds, the summary format, what is preserved, and how to tune or disable it, see [12 — Context limits and compaction in depth](12-context-and-compaction.md).
 
 ## Can the assistant remember something forever?
 

@@ -9,7 +9,7 @@ Key points:
 - the model receives assembled context, not only your newest sentence;
 - conversation transcripts are normally stored locally;
 - provider, MCP, web, plugin, telemetry, and remote features can communicate over the network;
-- old conversation detail may be summarized to fit model limits;
+- old conversation detail may be summarized to fit model limits (see [12 — Context limits and compaction](12-context-and-compaction.md));
 - the SQLite index is for speed; the JSONL transcript is the main local session record;
 - restoring a session also restores operational metadata, not only chat text.
 
