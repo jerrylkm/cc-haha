@@ -51,9 +51,7 @@ When you run `claude` in your terminal, the application undergoes a multi-phase 
 
 ## 🔍 Detailed Phase Breakdown
 
-### 1. High-Priority Performance Initialization
-Before evaluating large NPM modules, [src/main.tsx](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/main.tsx:1) runs critical async prefetch steps in parallel:
-- **Keychain Prefetch**: [src/utils/secureStorage/keychainPrefetch.js](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/utils/secureStorage/keychainPrefetch.js) pre-loads OAuth credentials and API keys from macOS Keychain / OS secure store so sync reads won't block startup (~65ms saved).
+Before evaluating large NPM modules, [src/main.tsx](../src/main.tsx#L1) runs critical async prefetch steps in parallel:
 - **MDM Read**: [src/utils/settings/mdm/rawRead.js](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/utils/settings/mdm/rawRead.js) reads Mobile Device Management policies in parallel.
 - **Profiler Checkpoints**: [src/utils/startupProfiler.js](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/utils/startupProfiler.js) records startup latency.
 
