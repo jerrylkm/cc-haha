@@ -65,8 +65,7 @@ The **Agent Loop** is the cognitive engine of Claude Code CLI. It receives user 
 ## 🧠 Core Components Explained
 
 ### 1. `QueryEngine` Class
-Located in [src/QueryEngine.ts](/home/jerry/workspaces/personal/repos/cc-haha.worktrees/claude-code-cli-analysis-docs/src/QueryEngine.ts:187), `QueryEngine` maintains conversation state, manages memory, coordinates permissions, and provides controls like `interrupt()` to stop running streams.
-
+Located in [src/QueryEngine.ts](../src/QueryEngine.ts#L187), `QueryEngine` maintains conversation state, manages memory, coordinates permissions, and provides controls like `interrupt()` to stop running streams.
 Key responsibilities:
 - **State Maintenance**: Holds the array of `Message` objects (`getMessages()`).
 - **File Read Cache**: Maintains file content snapshots (`getReadFileState()`) to avoid re-reading identical files within a session.
